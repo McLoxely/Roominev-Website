@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roominev</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fefefe;
+        }
+
+.container {
+    max-width: 1100px; /* Controls how wide your page can get */
+    margin: 0 auto; /* Centers it horizontally */
+    padding: 20px; /* Adds spacing inside */
+}
+
+body {
+    background-color: #f9fafb; /* Optional soft background */
+    font-family: Arial, sans-serif;
+}
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #1E3A8A; /* Nice blue */
+            color: white;
+        }
+
+        header h1 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+.language-toggle button {
+    margin-left: 10px;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Default (inactive) button */
+.language-toggle button:not(.active) {
+    background-color: #E5E7EB;
+    color: #1F2937;
+}
+
+/* Active language button */
+.language-toggle button.active {
+    background-color: #3B82F6;
+    color: white;
+}
+
+.language-toggle button:hover {
+    opacity: 0.85;
+}
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+.hero-text {
+    text-align: center;
+    padding: 40px 20px;    /* smaller top/bottom padding */
+    background-color: #E0E7FF;
+}
+
+.hero-text h1 {
+    font-size: 22px;       /* smaller than before */
+    color: #1E3A8A;        /* keep the dark blue */
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.3;      /* slightly tighter line spacing */
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;  /* reduced from 60px to 30px */
+    gap: 20px; /* smaller horizontal space between image and text */
+    flex-wrap: wrap;
+}
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+            background-color: #F3F4F6;
+        }
+
+.section img {
+    width: 300px;         /* you can change this number to make them larger or smaller */
+    height: 200px;        /* fixed height for uniformity */
+    object-fit: cover;    /* crops the image to fit the box neatly */
+    border-radius: 10px;  /* optional: rounded corners for a clean look */
+}
+
+        .section img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+        }
+
+        .section-text {
+            flex: 1;
+            min-width: 250px;
+            max-width: 680px;
+        }
+
+        .section-text h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #1E3A8A;
+        }
+
+        .section-left {
+            flex-direction: row !important; /* force image on left, text on right */
+        }
+
+
+        .section-text p {
+            font-size: 16px;
+            color: #374151;
+        }
+
+/* Remove default padding/margin from body */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contact Section Full-Width */
+#contact {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 40px 20px; /* horizontal padding is optional, can set to 0 if you want */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Flex layout: text left, map right */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  margin: 0;          /* remove extra margin */
+  padding: 0;         /* remove extra padding */
+}
+
+.contact-text {
+  flex: 1 1 280px;
+  padding-left: 0;    /* remove leftover nudge */
+}
+
+.map-container {
+  flex: 1 1 300px;
+  min-width: 300px;
+  height: 300px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #0a3d62;  /* dark blue background */
+  color: white;               /* white text for readability */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+main {
+  flex: 1;
+}
+        .contact-info {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #FBBF24; /* accent yellow */
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        @media(max-width: 768px) {
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section:nth-child(even) {
+                flex-direction: column;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .language-toggle {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    <!-- Header -->
+<header>
+  <h1>RoominevApts</h1>
+  <div class="language-toggle">
+      <button id="en-btn" class="active">EN</button>
+      <button id="fr-btn">FR</button>
+  </div>
+</header>
+
+<div class="hero-text">
+  <h1 
+    data-en="We are a no-fee tenant management company that makes life easy for tenants and property owners alike!" 
+    data-fr="Nous sommes une société de gestion locative sans frais qui simplifie la vie des locataires et des propriétaires !">
+    We are a no-fee tenant management company that makes life easy for tenants and property owners alike!
+  </h1>
+</div>
+
+ <main>
+
+    <!-- 4 modern sections -->
+<div class="section">
+    <img src="roominev-pic-1.jpg" alt="Section 1">
+    <div class="section-text">
+        <h2 
+            data-en="Students or Young Professionals" 
+            data-fr="Étudiant ou jeune professionnel">
+            Students or Young Professionals
+        </h2>
+        <p 
+            data-en="We manage 2 types of apartments: one for students and one for young professionals. We do not mix the two types for the simple reason that it changes the chemistry between roommates, which is something we pay close attention to!"
+            data-fr="Nous gérons 2 types d'appartements: un pour les étudiants et un pour les jeunes professionnels. Nous ne mélangeons pas les deux types pour la simple raison que cela change la chimie entre colocataires, ce à quoi nous faisons particulièrement attention !">
+            We manage 2 types of apartments: one for students and one for young professionals. We do not mix the two types for the simple reason that it changes the chemistry between roommates, which is something we pay close attention to!
+        </p>
+    </div>
+</div>
+
+<div class="section section-left">
+    <img src="roominev-pic-2.png" alt="Section 2">
+    <div class="section-text">
+        <h2 
+            data-en="Furnished" 
+            data-fr="Meublé">
+            Furnished
+        </h2>
+        <p 
+            data-en="Roominev offers everything furnished. Each room has a double bed, desk, chair, blinds, lamp, and closet, while all apartments are cooking-ready with a washer, dryer, fridge, and stove. Why spend $2000+ buying furniture only to sell it all in 1-2 years for a fraction of the price? Mix in the moving headache and getting furnished just makes sense."
+            data-fr="Roominev offre tout meublé. Chaque chambre a un lit double, une couverture, des oreillers, un bureau, une chaise, des lampes et un placard, tandis que tous les appartements sont prêts pour cuisiner, avec une laveuse, une sécheuse, un réfrigérateur et une cuisinière. Pourquoi dépenser plus de 2000 $ pour acheter des meubles si vous devez tout vendre en 1-2 ans pour une fraction du prix? Et qui veut bouger tout ça?">
+            Roominev offers everything furnished. Each room has a double bed, desk, chair, blinds, lamp, and closet, while all apartments are cooking-ready with a washer, dryer, fridge, and stove. Why spend $2000+ buying furniture only to sell it all in 1-2 years for a fraction of the price? Mix in the moving headache and getting furnished just makes sense.
+        </p>
+    </div>
+</div>
+
+<div class="section section-left">
+    <img src="roominev-pic-3.jpg" alt="Section 3">
+    <div class="section-text">
+        <h2 
+            data-en="Location" 
+            data-fr="Les Quartiers">
+            Location
+        </h2>
+        <p 
+            data-en="As long as you are next to a metro, navigation to your school or work is a piece of cake. That is why all of our apartments are within walking distance of a metro, which also means everything else too: groceries, pharmacies, cafes, shops, bars, restaurants, and sometimes even 24h pizza. Montreal’s public transit system offers the best deal in the country and is the cheapest of the big cities (not to mention 1 of 3 Canadian cities to have buses and metros)."
+            data-fr="Tant que vous êtes à côté d'un métro, la navigation vers l'école ou votre travail est facile. C'est pourquoi tous nos appartements sont à distance de marche d'un métro. Il y a aussi tout le reste: épiceries, pharmacies, cafés, magasins, bars, restaurants et parfois même 24h pizza. Le système de transport en commun de Montréal est la meilleure offre au Canada: c'est facilement la moins chère des grandes villes, et c'est 1 des 3 villes canadiennes qui a des autobus et des métros.">
+            As long as you are next to a metro, navigation to your school or work is a piece of cake. That is why all of our apartments are within walking distance of a metro, which also means everything else too: groceries, pharmacies, cafes, shops, bars, restaurants, and sometimes even 24h pizza. Montreal’s public transit system offers the best deal in the country and is the cheapest of the big cities (not to mention 1 of 3 Canadian cities to have buses and metros).
+        </p>
+    </div>
+</div>
+
+<div class="section section-left">
+    <img src="roominev-pic-4.jpg" alt="Section 4">
+    <div class="section-text">
+        <h2 
+            data-en="All-Included" 
+            data-fr="Tout Inclus">
+            All-Included
+        </h2>
+        <p 
+            data-en="Prices include rent, high-speed internet, furniture, and a monthly allotment to heating."
+            data-fr="Les prix comprennent: le loyer, l'internet haut vitesse, les meubles, et une allocation mensuelle de chauffage">
+            Prices include rent, high-speed internet, furniture, and a monthly allotment to heating.
+        </p>
+    </div>
+</div>
+
+</main>
+
+    <hr>
+
+    <!-- Contact Section -->
+<section id="contact" class="section section-left">
+    <div class="contact-info">
+        <h2 data-en="Contact Us" data-fr="Contactez-nous">Contact Us</h2>
+        <p>
+            <strong data-en="Address:" data-fr="Adresse:">Address:</strong> 5455 de Gaspé ave #710<br>
+            Montréal, QC H2T 3B3
+        </p>
+        <p>
+            <strong data-en="Phone:" data-fr="Téléphone :">Phone:</strong> (438) 409-3324
+        </p>
+        <p>
+            <strong data-en="Email:" data-fr="Courriel:">Email:</strong> roominev@gmail.com
+        </p>
+        <p>
+            <strong data-en="Opening Hours:" data-fr="Heures d'ouverture :">Opening Hours:</strong>
+            <span data-en="Mon-Fri 9am-5pm" data-fr="Lun-Ven 9h-17h">Mon-Fri 9am-5pm</span>
+        </p>
+
+    </div>
+
+    <div class="map-container">
+        <a class="map-link"
+           href="https://www.google.com/maps?q=45.52777736075531,-73.5963445516599"
+           target="_blank" rel="noopener noreferrer">
+            <img src="roominev-map.png" alt="Map of 5455 de Gaspé, Montreal" />
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p data-en="© 2025 RoominevApts. All rights reserved."
+       data-fr="© 2025 RoominevApts. Tous droits réservés.">
+       © 2025 RoominevApts. All rights reserved.
+    </p>
+</footer>
+
+<script>
+const buttons = document.querySelectorAll('.language-toggle button');
+
+// Find all elements that have a data-en attribute
+const translatableElements = document.querySelectorAll('[data-en]');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const lang = button.textContent.toLowerCase(); // 'en' or 'fr'
+
+    // Update text for every element
+    translatableElements.forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+
+    // Update active button styles
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  });
+});
+
+// Set English as default active
+buttons[0].classList.add('active');
+</script>
+
+</div>
+</body>
+</html>
